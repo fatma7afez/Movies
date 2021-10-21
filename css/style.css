@@ -1,0 +1,177 @@
+body {
+  font-family: "Dosis", sans-serif;
+  overflow-y: hidden;
+}
+.bg-black {
+  background-color: black;
+}
+
+.main-bgcolor {
+  background-color: white;
+}
+
+.main-text{
+  color: white;
+}
+
+.curs {
+  cursor: pointer;
+}
+
+/******************************** start sidebar section ************************************/
+#sideBar {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background-color: black;
+  max-width: 25%;
+}
+#toggleBar {
+  padding: 10px 5px;
+}
+li{
+  opacity: 0;
+  top: 100%;
+}
+li a{
+  transition: color 0.5s;
+}
+
+li a:hover{
+  color: #ff655c;
+}
+.social-media i {
+  transition: color 0.5s;
+}
+
+.social-media i:hover {
+  color: #ff655c;
+}
+
+/******************************** end sidebar section ************************************/
+
+/******************************** start home section ************************************/
+.search-bar input:focus {
+  background-color: black;
+  color: rgb(161, 158, 158);
+
+}
+body{
+  overflow-y: hidden;
+}
+.layer {
+  top: 100%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: top 0.5s;
+}
+
+.home-desc:hover .layer {
+  top: 0;
+}
+/******************************** end home section ************************************/
+
+/******************************** start footer section ************************************/
+.contact-info input:focus{
+    background-color: black;
+    color: rgb(161, 158, 158);
+}
+#alertName, #alertEmail, #alertPhone , #alertAge , #alertPassword, #alertRepassword{
+    display: none;
+}
+/******************************** end footer section ************************************/
+
+
+/******************************** start loading section ************************************/
+#loading{
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     z-index: 99999999999;
+     background-color:#ff655c;
+     display: flex;
+}
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #fff;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+/******************************** end loading section ************************************/
+
+
+/******************************** media query section ************************************/
+
+
+ @media screen and (max-width: 599px) {
+  #sideBar {
+   max-width: 50%;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  #sideBar {
+    max-width: 45%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  #sideBar {
+   max-width: 40%;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  #sideBar {
+    max-width: 25%;
+  }
+}

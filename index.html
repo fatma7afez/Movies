@@ -1,0 +1,354 @@
+<html>
+  <head>
+    <html>
+      <head>
+        <title>JS EXAM</title>
+        <meta charset="UTF-8" />
+        <meta name="author" content="Fatma Hafez" />
+        <meta name="description" content="website about movies" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="keywords" content="html,css,js,jQuery,movies,top related" />
+
+        <!-- Page icon Link -->
+        <link rel="icon" href="images/icon.png" />
+
+        <!-- Font Family Link -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap"
+          rel="stylesheet"
+        />
+
+        <!-- Fontawesome Link -->
+        <link rel="stylesheet" href="css/all.min.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+
+        <!-- Bootstrap Link -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+        <!-- Page Style Link -->
+        <link rel="stylesheet" href="css/style.css" />
+      </head>
+      <body class="bg-black">
+        <!--  start loading screen /  -->
+        <section id="loading" class="justify-content-center align-items-center">
+          <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+          </div>
+        </section>
+
+        <!--  end loading screen /  -->
+        <!-- start side bar section  -->
+        <section id="sideBar">
+          <div class="d-flex h-100">
+            <nav
+              id="navBar"
+              class="h-100 d-flex flex-column justify-content-between"
+            >
+              <ul class="sidenav w-75 list-unstyled p-3 bg-black ">
+                <li class=" p-2 item1 position-relative ">
+                  <a
+                    href="#"
+                    keyType="movie"
+                    keyCategory="now_playing"
+                    class="
+                      text-decoration-none main-text
+                      fs-5
+                      text-capitalize
+                      nav-item
+                    "
+                  >
+                    now playing
+                  </a>
+                </li>
+                <li class="p-2 position-relative">
+                  <a
+                    href="#"
+                    keyType="movie"
+                    keyCategory="popular"
+                    class="
+                      text-decoration-none main-text
+                      fs-5
+                      text-capitalize
+                      nav-item
+                    "
+                  >
+                    popular
+                  </a>
+                </li>
+               <li class="p-2 position-relative">
+                  <a
+                    href="#"
+                    keyType="movie"
+                    keyCategory="top_rated"
+                    class="text-decoration-none main-text fs-5 text-capitalize"
+                  >
+                    top rated
+                  </a>
+                </li>
+                <li class="p-2 position-relative">
+                  <a
+                    href="#"
+                    keyType="trending"
+                    keyCategory="movie/day"
+                    class="
+                      text-decoration-none main-text
+                      fs-5
+                      text-capitalize
+                      nav-item
+                    "
+                  >
+                    trending
+                  </a>
+                </li>
+               <li class="p-2 position-relative">
+                  <a
+                    href="#"
+                    keyType="movie"
+                    keyCategory="upcoming"
+                    class="
+                      text-decoration-none main-text
+                      fs-5
+                      text-capitalize
+                      nav-item
+                    "
+                  >
+                    upcoming
+                  </a>
+                </li>
+               <li class="p-2 position-relative">
+                  <a
+                    href="#"
+                    class="
+                      text-decoration-none main-text
+                      fs-5
+                      text-capitalize
+                      nav-item
+                    "
+                  >
+                    contact us
+                  </a>
+                </li> 
+              </ul>
+              <div class="m-3 social-media">
+                <a href="#" class="text-decoration-none text-white m-1"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="text-decoration-none text-white m-1"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="text-decoration-none text-white m-1"
+                  ><i class="fas fa-globe"></i
+                ></a>
+                <div class="copyright-nav py-1">
+                  <p class="text-white">
+                    Contact Us Copyright Â &copy; 2019 All Rights Reserved.
+                  </p>
+                </div>
+              </div>
+            </nav>
+            <div id="toggleBar" class="bg-white w-25">
+              <div
+                class="
+                  h-100
+                  d-flex
+                  flex-column
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <div class="log text-center">
+                  <img src="images/logo.png" alt="logo" class="w-50" />
+                </div>
+                <div class="curs">
+                  <i class="fas fa-align-justify fa-2x" id="toggleBtn"></i>
+                </div>
+                <div class="curs">
+                  <i class="fas fa-globe d-block mb-3 fa-lg"></i>
+                  <i class="fas fa-share-alt d-block fa-lg"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- end sidebar section  -->
+
+        <!----------------------------- start home section ----------------------------->
+        <section class="home my-5" class="bg-danger">
+          <div class="container">
+            <div class="search-bar row py-5" class="bg-info">
+              <div class="col-md-6">
+                <input
+                  type="search"
+                  placeholder="get movies by word"
+                  class="
+                    form-control
+                    bg-black
+                    text-center
+                    border-0 border-bottom
+                  "
+                  id="searchApi"
+                />
+              </div>
+              <div class="col-md-6">
+                <input
+                  type="search"
+                  placeholder="search....."
+                  class="
+                    form-control
+                    bg-black
+                    text-center
+                    border-0 border-bottom
+                  "
+                  id="searchWebsite"
+                />
+              </div>
+            </div>
+
+            <div class="home-content my-5">
+              <div class="row" id="myRow"></div>
+            </div>
+          </div>
+        </section>
+        <!----------------------------- end home section -------------------------------->
+
+        <!----------------------------- start footer section ----------------------------->
+        <footer class="contact">
+          <div class="container">
+            <h2 class="text-white fs-1">Contact Us...</h2>
+            <div class="contact-info text-capitalize row py-5" class="bg-info">
+              <div class="col-md-6 mb-3">
+                <input
+                  type="text"
+                  placeholder="enter your name"
+                  class="
+                    form-control
+                    bg-black
+                    text-center
+                    border-0 border-bottom
+                  "
+                  id="userName"
+                />
+                <div class="alert alert-danger" id="alertName" role="alert">
+                  your name is not valid ... you should the first letter capital
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="email"
+                  placeholder="enter email"
+                  class="
+                    form-control
+                    bg-black
+                    text-center
+                    border-0 border-bottom
+                  "
+                  id="userEmail"
+                />
+                <div class="alert alert-danger" id="alertEmail" role="alert">
+                  your email is not valid and you should put @ and .com
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="number"
+                  placeholder="enter phone"
+                  class="
+                    form-control
+                    bg-black
+                    text-center
+                    border-0 border-bottom
+                  "
+                  id="userPhone"
+                />
+                <div class="alert alert-danger" id="alertPhone" role="alert">
+                  enter valid phone
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="number"
+                  placeholder="enter age"
+                  class="
+                    form-control
+                    bg-black
+                    text-center
+                    border-0 border-bottom
+                  "
+                  id="userAge"
+                />
+                <div class="alert alert-danger" id="alertAge" role="alert">
+                  enter valid age
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="password"
+                  placeholder="enter password"
+                  class="
+                    form-control
+                    bg-black
+                    text-center
+                    border-0 border-bottom
+                  "
+                  id="userPassword"
+                />
+                <div class="alert alert-danger" id="alertPassword" role="alert">
+                  entre valid password *Minimum eight characters, at least one
+                  letter and one number:*
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <input
+                  type="password"
+                  placeholder="enter repassword"
+                  class="
+                    form-control
+                    bg-black
+                    text-center
+                    border-0 border-bottom
+                  "
+                  id="userRepassword"
+                />
+                <div
+                  class="alert alert-danger"
+                  id="alertRepassword"
+                  role="alert"
+                >
+                  enter valid Repassword
+                </div>
+              </div>
+              <div class="col-md-2 mb-3">
+                <button
+                  type="submit"
+                  class="btn btn-outline-danger"
+                  disabled
+                  id="submitBtn"
+                >
+                  submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </footer>
+        <!----------------------------- end footer section ----------------------------->
+
+        <!-- JQuery Link -->
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <!-- bundle Link -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- js Link -->
+        <script src="js/main.js"></script>
+      </body>
+    </html>
+  </head>
+</html>
